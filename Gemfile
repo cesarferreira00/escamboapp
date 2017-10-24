@@ -5,7 +5,10 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5'
 # Rails gem of the Bootstrap based admin theme SB Admin 2. http://dreamingechoes.github.io/boots…
 gem 'bootstrap_sb_admin_base_v2'
+# The most popular front-end framework for developing responsive, mobile first projects on the web.
 gem 'rails-assets-bootstrap', '4.0.0.beta', source: 'https://rails-assets.org'
+# A simple, versatile notification library
+gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
 # Flexible authentication solution for Rails with Warden. http://blog.plataformatec.com.br/tag/…
 gem 'devise'
 #Translations for the devise gem
@@ -19,7 +22,7 @@ gem 'rails-i18n'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier', '>= 1.3.0' 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -55,6 +58,8 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+  # An IRB alternative and runtime developer console
+  gem 'pry'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
