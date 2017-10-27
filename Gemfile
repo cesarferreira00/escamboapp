@@ -5,10 +5,16 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5'
 # Rails gem of the Bootstrap based admin theme SB Admin 2. http://dreamingechoes.github.io/boots…
 gem 'bootstrap_sb_admin_base_v2'
-# The most popular front-end framework for developing responsive, mobile first projects on the web.
-gem 'rails-assets-bootstrap', '4.0.0.beta', source: 'https://rails-assets.org'
-# A simple, versatile notification library
-gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
+
+source 'https://rails-assets.org' do
+  # The most popular front-end framework for developing responsive, mobile first projects on the web.
+  gem 'rails-assets-bootstrap', '4.0.0.beta'
+  # A simple, versatile notification library
+  gem 'rails-assets-notifyjs'
+  # Wrappers for JavaScript alert(), confirm() and other flexible dialogs using Twitter's bootstrap framework
+  gem 'rails-assets-bootbox'
+end
+
 # Flexible authentication solution for Rails with Warden. http://blog.plataformatec.com.br/tag/…
 gem 'devise'
 #Translations for the devise gem
@@ -56,6 +62,8 @@ group :development, :test do
 end
 
 group :development do
+  # A library for generating fake data such as names, addresses, and phone numbers.
+  gem 'faker'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
   # An IRB alternative and runtime developer console
